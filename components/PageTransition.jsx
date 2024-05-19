@@ -9,7 +9,7 @@ const PageTransition = ({ children }) => {  // desactiva la opacidad del conteni
   const pathname = usePathname()
   
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       <div key={pathname}>
         <motion.div
           className="h-screen w-screen fixed bg-primary top-0 pointer-events-none" 

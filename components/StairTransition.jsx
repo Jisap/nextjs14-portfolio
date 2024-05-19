@@ -34,7 +34,6 @@ const StairTransition = () => {                           // Muestra las escaler
               }
             }}
           />
-
         </div>
       </AnimatePresence>
     </>
