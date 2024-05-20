@@ -20,7 +20,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={jetbrainsMono.variable}>
         <Header />
+        {/* 1º div se oculta & animation stairs */}
         <StairTransition /> 
+        {/* 2º div se oculta & render children */}
         <PageTransition>
           {children}
         </PageTransition>
