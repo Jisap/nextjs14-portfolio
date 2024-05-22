@@ -1,6 +1,6 @@
 "use client"
 
-import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodejs } from 'react-icons/fa'
+import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs } from 'react-icons/fa'
 import { SiTailwindcss, SiNextdotjs } from 'react-icons/si';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
@@ -145,7 +145,7 @@ const skills = {
       name: "next.js",
     },
     {
-      icon: <FaNodejs />,
+      icon: <FaNodeJs />,
       name: "node.js",
     },
     {
@@ -170,7 +170,30 @@ const Resume = () => {
       }}
       className='min-h-[80vh] flex items-center justify-center py-12 xl:py-0'
     >
-      resume page
+      <div className='container mx-auto'>
+        <Tabs 
+          defaultValue='experience' 
+          className='flex flex-col xl:flex-row gap-[60px]'
+        >
+          <TabsList className='flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6'>
+            <TabsTrigger value='experience'>Experience</TabsTrigger>
+            <TabsTrigger value='education'>Education</TabsTrigger>
+            <TabsTrigger value='skills'>Skills</TabsTrigger>
+            <TabsTrigger value='about'>About me</TabsTrigger>
+          </TabsList>
+          {/* content */}
+          <div className='min-h-[70vh] w-full'>
+            {/* experience */}
+            <TabsContent value='experience' className='w-full'>
+              experience
+            </TabsContent>
+            {/* education */}
+            <TabsContent value='education' className='w-full'>
+              education
+            </TabsContent>
+          </div>
+        </Tabs>
+      </div>
     </motion.div>
   )
 }
